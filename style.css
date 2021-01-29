@@ -1,0 +1,72 @@
+:root{
+    --main-color: #5DBCF9;
+    --main-bg-color: #191919;
+}
+body {
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+div {
+    width: 100px;
+    height: 50px;
+    background-color: var(--main-bg-color);
+    border: 10px solid var(--main-color);
+}
+.top {
+    width: 60px;
+    height: 40px;
+}
+.bridge {
+    height: 80px;
+    width: 120px;
+    margin-top: -10px;
+}
+section.main-ship {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.port, .starboard {
+    height: 50px;
+    width: 120px;
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+}
+.bow {
+    width: 11px;
+    height: 120px;
+    background-color: var(--main-color);
+    position: relative;
+    border: none;
+    z-index: 2;
+    transform: translateY(-50px);
+}
+.port {
+    transform: rotate(-30deg) translateX(39px) translateY(-10px);
+    border-right: none;
+}
+.starboard {
+    transform: rotate(30deg) translateX(-39px) translateY(-10px);
+    border-left: none;
+}
+.long-wave, .short-wave {
+    height: 14px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    position: relative;
+    z-index: 2;
+}
+.long-wave {
+    width: 300px;
+    box-shadow: 0 -10px 0 var(--main-bg-color);
+    margin-top: -75px;
+}
+.short-wave {
+    width: 200px;
+}
